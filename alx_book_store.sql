@@ -1,4 +1,4 @@
-CREATE DATABASE bookstore;
+CREATE DATABASE IF NOT EXISTS bookstore;
 USE bookstore;
 CREATE TABLE Authors (author_id INT PRIMARY KEY AUTO_INCREMENT, author_name VARCHAR(215) NOT NULL);
 CREATE TABLE Books (book_id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(130) NOT NULL, author_id INT, price DECIMEL(10,2), publication_date DATE, FOREIGN KEY(author_id) REFERENCES Author(author_id) ON DELETE SET NULL);
