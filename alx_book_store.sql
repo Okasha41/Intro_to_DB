@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS bookstore;
-USE bookstore;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+USE alx_book_store;
 CREATE TABLE Authors (author_id INT PRIMARY KEY AUTO_INCREMENT, author_name VARCHAR(215) NOT NULL);
 CREATE TABLE Books (book_id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(130) NOT NULL, author_id INT, price DECIMEL(10,2), publication_date DATE, FOREIGN KEY(author_id) REFERENCES Author(author_id) ON DELETE SET NULL);
 CREATE TABLE Customers (customer_id INT PRIMARY KEY AUTO_INCREMENT, customer_name VARCHAR(215) NOT NULL, email VARCHAR(215) UNIQUE NOT NULL, address TEXT);
